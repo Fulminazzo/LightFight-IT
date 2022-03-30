@@ -1,0 +1,152 @@
+####################################################################
+#                    config.yml LightFight file                    #
+####################################################################
+
+# Se questa opzione è impostata su true, il config.yml e il messages.yml saranno
+# aggiornati ogni secondo. (Non c'e' bisogno di ricaricare)
+auto-update: true
+
+# Se impostata su true, il ct si avviera' quando un giocatore colpisce un altro giocatore.
+player-ct: true
+
+# Se impostata su true, il ct si avviera' quando un giocatore colpisce un'entita' e viceversa.
+entity-ct: false
+
+# Le seguenti entita' non saranno in grado di mettere il giocatore in combattimento, anche se
+# "entity-ct" e' abilitato. Controllare https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html per altro.
+entity-whitelist: []
+
+# Se impostata su false, quando il giocatore disabilita la sua modalita' pvp, non sara' in grado di
+# colpire altri giocatori.
+pvp-backwards: true
+
+# Se impostata su true, quando il giocatore disabilita la sua modalita' pve, non sara' in grado di
+# colpire altre entita'.
+pve-backwards: false
+
+# Se impostato su true, il giocatore sara' messo fuori combattimento quando uccide tutti 
+# color che erano ancora in combattimento con lei/lui.
+untag-player-on-death: false
+
+# Imposta su true per forzare il giocatore a respawnare automaticamente.
+auto-respawn: false
+
+# Quanto tempo (in secondi) dovrebbe passare prima che il combat log termina.
+timer: 30
+
+# Se abilitato, il giocatore sara' ucciso quando slogga.
+kill-on-quit: true
+
+# Se abilitato, il giocatore sara' ucciso quando sara' kickata/o.
+kill-on-kick: true
+
+# Sezione delle opzioni di Grazia.
+grace:
+  # Durante il periodo di grazia, il giocatore non sara' in grado di colpire le entita'
+  # specificate per un po' dopo essere loggato nel server per la prima volta.
+  # Qui puoi specificare quanto tempo in minuti debba durare.
+  period: 0
+
+  # Se messo su true, i giocatori non saranno in grado di attaccare il giocatore durante il periodo di grazia.
+  pvp: true
+
+  # Se messo su true, le entita' non saranno in grado di attaccare il giocatore durante il periodo di grazia.
+  pve: false
+
+  # Se messo su true, il giocatore non sara' in grado di colpire un altro giocatore durante il periodo di grazia.
+  # Va in conflitto con grace-deny-on-pvp.
+  prevent-pvp: true
+
+  # Se messo su true, il giocatore non sara' in grado di colpire un'entita' durante il periodo di grazia.
+  # Va in conflitto con grace-deny-on-pve.
+  prevent-pve: true
+
+  # Se messo su true, quando il giocatore prova a colpire un altro giocatore, egli perdera' la sua grazia.
+  deny-on-pvp: false
+
+  # Se messo su true, quando il giocatore prova a colpire un'entita', egli perdera' la sua grazia.
+  deny-on-pve: false
+
+# Lista di mondi da ignorare quando si taggano i giocatori.
+ignored-worlds: []
+
+# Se impostata su false, quando un giocatore portera' verso di lei/lui un altro utente,
+# saranno entrambi messi in combattimento.
+ignore-fishing-rod: false
+
+# Se impostata su true, i giocatori in creative non saranno messi in combattimento.
+ignore-creative: true
+
+# Se impostata su true, i giocatori che stanno volando saranno messi a terra.
+block-fly: true
+
+# Una sezione per abilitare molte feature.
+enable:
+  # Se disabilitata, i giocatori non saranno in grado di parlare mentre in combattimento.
+  chat: true
+
+  # Se disabilitata, i giocatori non saranno in grado di cambiare gamemode mentre in combattimento.
+  gamemode: false
+
+  # Se disabilitata, i giocatori non saranno in grado di aprire il suo inventario mentre in combattimento.
+  inventory: true
+
+  # Se disabilitata, i giocatori non saranno in grado di gettare oggetti mentre in combattimento.
+  drop: true
+
+  # Se disabilitata, i giocatori non saranno in grado di teletrasportarsi mentre in combattimento.
+  teleport: false
+
+  # Se disabilitata, i giocatori non saranno in grado di teletrasportarsi con le enderpearl mentre in combattimento.
+  enderpearls: false
+
+# Se questa opzione e' impostata su true, i giocatori non saranno in grado di entrare le zone in deny PvP di WorldGuard.
+barriers: true
+
+# Qui si puo' specificare come reagire quando un utente prova ad entrare in una zona non PvP. Ci sono tre opzioni:
+# - BLOCK: piazza blocchi nelle mura della zona;
+# - KNOCKBACK: lancia i giocatori all'indietro;
+# - NONE: non fa nulla ma impedisce l'entrata.
+barrier-type: KNOCKBACK
+
+# Se barrier-type è impostata su BLOCK, qui puoi specificare quale blocco.
+barrier-block: BARRIER
+
+# Se barrier-type è impostata su BLOCK, qui puoi specificare il raggio delle mura.
+barrier-radius: 5
+
+# timer-message accetta quattro opzioni:
+# - ACTIONBAR: mostra il timer come actionbar;
+# - BOSSBAR: mostra il timer come bossbar;
+# - PROGRESS: mostra il timer come actionbar come un progresso;
+# - NONE: non mostra il timer.
+timer-message: ACTIONBAR
+
+# Il colore della bossbar (solo 1.9+). Controllare https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html per altro.
+bossbar-color: RED
+
+# In che modo inviare il messaggio di broadcast agli utenti. Accetta:
+# - ACTIONBAR: mostra il broadcast come actionbar;
+# - BOSSBAR: mostra il broadcast come bossbar;
+# - MESSAGE: mostra il broadcast in chat;
+# - NONE: non mostra il messaggio.
+broadcast-message: MESSAGE
+
+# Se abilitato, il giocatore sara' illuminato nelle versioni supportate.
+glow-enabled: true
+
+# Il colore dell'effetto luminoso. Controllare https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html per altro.
+glow-color: RED
+
+# Lista di comandi abilitati durante il combattimento.
+whitelisted-commands: []
+
+# Lista di pozioni da essere rimossi quando un giocatore entra in combattimento. Controllare https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html per altro.
+potions:
+  - INVISIBILITY
+
+# Lista di proiettili da essere ignorati durante il combattimento. Controllare https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html per altro.
+ignored-projectiles:
+  - ENDER_PEARL
+  - EGG
+  - SNOWBALL
